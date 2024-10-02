@@ -1,0 +1,288 @@
+:root {
+  --primary-color: #FF6B6B;
+  --secondary-color: #4ECDC4;
+  --bg-color: #F7F7F7;
+  --text-color: #333;
+  --dark-bg-color: #2C3E50;
+  --dark-text-color: #ECF0F1;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+body.dark-mode header {
+  background-color: rgba(44, 62, 80, 0.9);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+body.dark-mode nav ul li a {
+  color: var(--dark-text-color);
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+body.dark-mode .theme-toggle {
+  color: var(--dark-text-color);
+}
+
+.theme-toggle:hover {
+  color: var(--primary-color);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 6rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?travel') no-repeat center center/cover;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta:hover {
+  background-color: #FF8787;
+  transform: translateY(-3px);
+}
+
+.featured-destinations {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-destinations h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+}
+
+.destination {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.destination img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destination-info {
+  padding: 1.5rem;
+}
+
+.destination-info h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.booking-form button {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking-form button:hover {
+  background-color: #FF8787;
+}
+
+footer {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-links a {
+  color: var(--dark-text-color);
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-right: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .social-links {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelEase - Your Modern Booking Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">TravelEase</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#featured-destinations">Explore</a></li>
+                    <li><a href="#booking-form">Book</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Unforgettable experiences await. Book your journey today.</p>
+            <a href="#booking-form" class="cta">Start Exploring</a>
+        </section>
+
+        <section id="featured-destinations" class="featured-destinations">
+            <h2>Featured Destinations</h2>
+            <div class="destination-grid">
+                <div class="destination">
+                    <img src="images/paris.jpg" alt="Paris">
+                    <div class="destination-info">
+                        <h3>Paris, France</h3>
+                        <p>Experience the city of lights with its iconic Eiffel Tower, art museums, and exquisite cuisine.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="images/tokyo.jpg" alt="Tokyo">
+                    <div class="destination-info">
+                        <h3>Tokyo, Japan</h3>
+                        <p>Explore the bustling streets, historic temples, and cutting-edge technology in Japan's capital.</p>
+                    </div>
+                </div>
+                <div class="destination">
+                    <img src="images/newyork.jpg" alt="New York">
+                    <div class="destination-info">
+                        <h3>New York, USA</h3>
+                        <p>Discover the vibrant culture, world-famous landmarks, and diverse neighborhoods of New York City.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking-form" class="booking-form">
+            <h2>Book Your Trip</h2>
+            <form>
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-in">Check-in Date</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check-out Date</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="room-type">Room Type</label>
+                    <select id="room-type" name="room-type" required>
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </div>
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TravelEase. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
